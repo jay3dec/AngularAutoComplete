@@ -1,0 +1,10 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input type="text" placeholder="search word" aria-label="Number" matInput [formControl]="searchTerm" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let item of searchResult" [value]="item">
+        {{ item }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
